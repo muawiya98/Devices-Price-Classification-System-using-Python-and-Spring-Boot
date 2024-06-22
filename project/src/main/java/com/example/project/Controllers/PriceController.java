@@ -1,16 +1,13 @@
 package com.example.project.Controllers;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import com.example.project.device.Classes.*;
-import com.example.project.Services.*;
+
+import com.example.project.Services.PredictionService;
 
 @RestController
 public class PriceController {
@@ -22,7 +19,7 @@ public class PriceController {
 		super();
 		this.predictionService = predictionService;
 	}
-	
+	// http://localhost:8080/predict
 	@PostMapping("/predict")
 	public void predictPrice (@RequestBody Map<String, Long> requestBody) {
 	    Long id = requestBody.get("id");

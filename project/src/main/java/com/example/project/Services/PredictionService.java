@@ -1,12 +1,10 @@
 package com.example.project.Services;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.project.device.Classes.*;
-import com.example.project.Repositories.*;
+
+import com.example.project.Repositories.DeviceRepository;
+import com.example.project.device.Classes.Device;
 
 
 @Service
